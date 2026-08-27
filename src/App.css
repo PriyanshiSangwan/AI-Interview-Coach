@@ -1,0 +1,2017 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #f8f9fc;
+  color: #172033;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+select {
+  font-family: inherit;
+}
+
+/* =========================
+   HOME
+========================= */
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.ai-logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #e9e7f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.ai-logo span {
+  font-size: 34px;
+  color: #111827;
+}
+
+.home-page h1 {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 500;
+}
+
+.subtitle {
+  margin: 20px 0 48px;
+  font-size: 18px;
+  color: #737986;
+  line-height: 1.5;
+}
+
+.start-button {
+  border: none;
+  background: #9189ca;
+  color: #111827;
+  font-size: 18px;
+  padding: 16px 44px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background: #8178bd;
+}
+
+.practice-text {
+  margin-top: 48px;
+  font-size: 16px;
+  color: #737986;
+}
+
+.features {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #303746;
+}
+
+/* =========================
+   SETUP
+========================= */
+
+.setup-page {
+  min-height: 100vh;
+  background: #f8f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 110px 24px 60px;
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.setup-header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.setup-header p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #737986;
+}
+
+.setup-form {
+  width: 100%;
+  max-width: 560px;
+}
+
+.form-group {
+  margin-bottom: 44px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.form-group select {
+  width: 100%;
+  height: 60px;
+  padding: 0 18px;
+  border: 1px solid #dedee5;
+  border-radius: 10px;
+  background: white;
+  color: #303746;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: #9189ca;
+}
+
+.form-group span {
+  display: block;
+  margin-top: 6px;
+  padding-left: 18px;
+  color: #8a8e98;
+  font-size: 15px;
+}
+
+.difficulty-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.difficulty-button {
+  height: 62px;
+  border: 1px solid #dedee5;
+  border-radius: 10px;
+  background: white;
+  color: #171c29;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.difficulty-button.selected {
+  background: #9189ca;
+  border-color: #9189ca;
+}
+
+.continue-button {
+  display: block;
+  margin: 10px auto 0;
+  min-width: 190px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  background: #9189ca;
+  color: #111827;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.continue-button:disabled {
+  background: #d5d3e5;
+  color: #858391;
+  cursor: not-allowed;
+}
+
+/* =========================
+   CONFIRMATION
+========================= */
+
+.confirmation-page {
+  min-height: 100vh;
+  padding: 110px 24px 60px;
+  text-align: center;
+}
+
+.confirmation-header h1 {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.confirmation-header p {
+  color: #737986;
+  font-size: 18px;
+}
+
+.settings-card {
+  width: 400px;
+  max-width: 100%;
+  margin: 45px auto 60px;
+  padding: 30px 35px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 16px;
+}
+
+.settings-card h2 {
+  margin-top: 0;
+  margin-bottom: 38px;
+  font-size: 24px;
+}
+
+.setting-item {
+  margin-bottom: 32px;
+}
+
+.setting-item span {
+  display: block;
+  color: #737986;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.setting-item strong {
+  font-size: 21px;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 215px;
+}
+
+.edit-button,
+.start-confirm-button {
+  min-width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background: white;
+  border: 1px solid #9189ca;
+}
+
+.start-confirm-button {
+  border: none;
+  background: #9189ca;
+}
+
+.confirmation-note {
+  margin-top: 45px;
+  color: #737986;
+  line-height: 2;
+}
+
+/* =========================
+   MICROPHONE
+========================= */
+
+.microphone-page {
+  min-height: 100vh;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.mic-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: #9189ca;
+  border: 25px solid #e9e7f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+.microphone-page h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.mic-info-card {
+  max-width: 430px;
+  margin: 40px auto 30px;
+  padding: 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 16px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.mic-info-card h2 {
+  font-size: 21px;
+}
+
+.mic-info-card p {
+  color: #737986;
+}
+
+.help-text,
+.mic-footer {
+  color: #737986;
+}
+
+.mic-success {
+  color: #159447;
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* =========================
+   INTERVIEW
+========================= */
+
+.interview-page {
+  min-height: 100vh;
+  padding: 35px 12%;
+}
+
+.interview-top {
+  display: flex;
+  justify-content: space-between;
+  color: #737986;
+}
+
+.end-interview {
+  background: none;
+  border: none;
+  color: #737986;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.progress-container {
+  height: 6px;
+  background: #e4e4e8;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #9189ca;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.interview-content {
+  max-width: 850px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.interview-ai-logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #9189ca;
+  border: 25px solid #e9e7f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.interview-ai-logo span {
+  font-size: 32px;
+}
+
+.interviewer-label {
+  font-size: 18px;
+}
+
+.interview-content h1 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.status-text {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.instruction {
+  color: #737986;
+}
+
+.mic-button {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  border: 20px solid #e9e7f6;
+  background: #9189ca;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.waveform {
+  color: #9189ca;
+  font-size: 28px;
+  letter-spacing: 5px;
+  margin: 20px;
+}
+
+.recording-label {
+  color: #c62828;
+}
+
+.answer-box {
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+  background: white;
+}
+
+.interview-footer {
+  color: #737986;
+}
+
+/* =========================
+   COMPLETE
+========================= */
+
+.complete-page,
+.scorecard-page,
+.feedback-page,
+.practice-page {
+  min-height: 100vh;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.complete-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: auto;
+}
+
+.complete-page h1,
+.scorecard-page > h1,
+.feedback-page > h1,
+.practice-page > h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-card {
+  width: 430px;
+  max-width: 100%;
+  margin: 35px auto;
+  padding: 30px;
+  text-align: left;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 16px;
+}
+
+.next-text {
+  line-height: 1.6;
+}
+
+.text-button {
+  display: block;
+  margin: 22px auto;
+  border: none;
+  background: transparent;
+  color: #737986;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* =========================
+   SCORECARD
+========================= */
+
+.overall-card {
+  width: 320px;
+  margin: 30px auto;
+  padding: 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 16px;
+}
+
+.overall-card h2 {
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+
+.overall-card strong {
+  display: block;
+  font-size: 34px;
+}
+
+.overall-card span {
+  color: #159447;
+  display: block;
+  margin-top: 10px;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  margin: 15px auto 30px;
+  border-radius: 50%;
+  background: #e9e7f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.score-grid {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.score-item {
+  padding: 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+}
+
+.score-item h3 {
+  font-size: 18px;
+}
+
+.score-item p {
+  font-size: 18px;
+}
+
+.summary-feedback {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+  text-align: left;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback-grid {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  text-align: left;
+}
+
+.feedback-card {
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+  padding: 25px;
+  min-height: 170px;
+}
+
+.feedback-card h2 {
+  font-size: 21px;
+}
+
+.feedback-card p {
+  line-height: 1.5;
+}
+
+.feedback-note {
+  color: #737986;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   PRACTICE AGAIN
+========================= */
+
+.previous-card {
+  max-width: 380px;
+  margin: 35px auto;
+  padding: 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.choose-title {
+  margin: 35px 0;
+}
+
+.practice-options {
+  max-width: 1050px;
+  margin: auto auto 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.practice-option {
+  padding: 35px 25px;
+  background: white;
+  border: 1px solid #dedee5;
+  border-radius: 15px;
+}
+
+.practice-option.selected {
+  background: #9189ca;
+}
+
+.practice-option h3 {
+  font-size: 21px;
+}
+
+.practice-option p {
+  font-size: 17px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .home-page h1,
+  .confirmation-header h1,
+  .microphone-page h1,
+  .complete-page h1,
+  .scorecard-page > h1,
+  .feedback-page > h1,
+  .practice-page > h1 {
+    font-size: 32px;
+  }
+
+  .difficulty-options,
+  .score-grid,
+  .feedback-grid,
+  .practice-options {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-actions {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interview-page {
+    padding: 25px 20px;
+  }
+}
+/* ================================
+   INTERVIEW ACTION BUTTONS
+================================ */
+
+.interview-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+  width: 100%;
+}
+
+.interview-actions button {
+  min-width: 150px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Clear button */
+
+.secondary-button {
+  background: white;
+  color: #6f63b6;
+  border: 1px solid #c9c3e8;
+  padding: 0 24px;
+}
+
+.secondary-button:hover {
+  background: #f3f1fc;
+}
+
+/* Submit button */
+
+.interview-actions .start-button {
+  min-width: 180px;
+  margin: 0;
+}
+
+/* ================================
+   ANSWER TEXTAREA
+================================ */
+
+.answer-box {
+  width: min(650px, 90%);
+  min-height: 130px;
+  max-height: 220px;
+
+  padding: 18px 20px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8d4e8;
+  border-radius: 14px;
+
+  background: white;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #222;
+
+  outline: none;
+
+  /* IMPORTANT:
+     User cannot resize the box manually */
+  resize: none;
+
+  overflow-y: auto;
+
+  margin: 20px auto 0;
+
+  display: block;
+}
+
+.answer-box:focus {
+  border-color: #9187d0;
+  box-shadow: 0 0 0 3px rgba(145, 135, 208, 0.12);
+}
+
+.answer-box::placeholder {
+  color: #999;
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.error-message {
+  width: min(650px, 90%);
+  margin: 14px auto 0;
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  background: #fff1f1;
+  border: 1px solid #f0b5b5;
+
+  color: #b42318;
+
+  font-size: 14px;
+}
+
+/* ================================
+   AI LOADING
+================================ */
+
+.ai-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 16px;
+
+  color: #6f63b6;
+  font-size: 15px;
+}
+
+.loading-dot {
+  animation: loadingPulse 1s infinite;
+}
+
+@keyframes loadingPulse {
+  0% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* ================================
+   RECORDING STATUS
+================================ */
+
+.recording-dot {
+  color: #e5484d;
+  animation: recordingPulse 1s infinite;
+}
+
+@keyframes recordingPulse {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* =====================================================
+   INTERVIEW SETUP
+===================================================== */
+
+.setup-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.setup-card {
+  width: min(620px, 100%);
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.setup-card h1 {
+  margin-bottom: 8px;
+}
+
+.setup-field {
+  margin-top: 22px;
+}
+
+.setup-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.setup-field select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.setup-actions button {
+  flex: 1;
+}
+
+/* =====================================================
+   INTERVIEW CONTEXT
+===================================================== */
+
+.interview-context {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+
+.interview-context span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1f3f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   ANSWER BOX
+===================================================== */
+
+.answer-box {
+  width: 100%;
+  min-height: 160px;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.answer-box:focus {
+  outline: none;
+  border-color: #555;
+}
+
+/* =====================================================
+   SCORECARD
+===================================================== */
+
+.answer-reviews {
+  width: min(900px, 100%);
+  margin: 40px auto;
+}
+
+.review-card {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.review-score {
+  margin: 16px 0;
+  font-weight: 700;
+}
+
+.review-card h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.review-card p {
+  line-height: 1.6;
+}
+
+.review-card li {
+  margin-bottom: 6px;
+}
+/* =====================================================
+   DATASET INTERVIEW SETUP
+===================================================== */
+
+.setup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.setup-card {
+  width: min(620px, 100%);
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.setup-field {
+  margin-top: 22px;
+}
+
+.setup-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.setup-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.setup-field select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.setup-actions button {
+  flex: 1;
+}
+
+.dataset-match-info {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.dataset-match-info strong {
+  font-size: 18px;
+}
+
+.dataset-match-info span {
+  font-weight: 600;
+}
+
+.loading-message {
+  padding: 24px;
+  text-align: center;
+}
+
+/* =====================================================
+   INTERVIEW CONTEXT
+===================================================== */
+
+.interview-context {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0 22px;
+}
+
+.interview-context span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1f3f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   ANSWER BOX
+===================================================== */
+
+.answer-box {
+  width: 100%;
+  min-height: 160px;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.answer-box:focus {
+  outline: none;
+  border-color: #555;
+}
+
+/* =====================================================
+   SCORECARD
+===================================================== */
+
+.answer-reviews {
+  width: min(900px, 100%);
+  margin: 40px auto;
+}
+
+.review-card {
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.review-card h4 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.review-card p {
+  line-height: 1.6;
+}
+
+.review-card li {
+  margin-bottom: 6px;
+}
+
+/* =====================================================
+   DISABLED BUTTON
+===================================================== */
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   AUTH
+===================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: min(440px, 100%);
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.auth-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  margin-top: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.success-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #e9f8ee;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-page {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  margin: 5px 0;
+}
+
+.dashboard-header p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-start {
+  margin-top: 30px;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  padding: 24px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.stat-card span {
+  display: block;
+  opacity: 0.65;
+  margin-bottom: 10px;
+}
+
+.stat-card strong {
+  font-size: 28px;
+}
+
+.dashboard-section {
+  margin-top: 45px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.history-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.history-card h3 {
+  margin: 0 0 5px;
+}
+
+.history-card p {
+  margin: 0 0 5px;
+  opacity: 0.7;
+}
+
+.history-card strong {
+  font-size: 22px;
+}
+
+.empty-state {
+  margin-top: 20px;
+  padding: 35px;
+  text-align: center;
+  background: white;
+  border-radius: 18px;
+}
+
+/* =====================================================
+   SETUP
+===================================================== */
+
+.setup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.setup-card {
+  width: min(620px, 100%);
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.setup-field {
+  margin-top: 20px;
+}
+
+.setup-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.setup-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  font-size: 15px;
+}
+
+.setup-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.setup-actions button {
+  flex: 1;
+}
+
+.dataset-match-info {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+/* =====================================================
+   INTERVIEW
+===================================================== */
+
+.interview-context {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.interview-context span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1f3f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.answer-box {
+  width: 100%;
+  min-height: 160px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.answer-box:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.interview-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.interview-actions button {
+  flex: 1;
+}
+
+/* =====================================================
+   SCORECARD
+===================================================== */
+
+.summary-card {
+  padding: 25px;
+  margin: 25px auto;
+  width: min(700px, 100%);
+  box-sizing: border-box;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .setup-card,
+  .auth-card {
+    padding: 25px;
+  }
+
+  .setup-actions,
+  .interview-actions {
+    flex-direction: column;
+  }
+}
+/* =========================================================
+   FINAL UI FIX — AUTH + DASHBOARD
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f7fb;
+  color: #111;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- AUTH PAGE ---------- */
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f7f7fb;
+}
+
+/* Login card */
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  min-height: auto;
+  padding: 42px 38px 36px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.10);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* AI logo */
+
+.auth-card .ai-logo {
+  width: 128px;
+  height: 128px;
+  min-width: 128px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8e6f8;
+  margin-bottom: 25px;
+}
+
+.auth-card .ai-logo span {
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* IMPORTANT:
+   Prevent old h1 styles from causing overlap */
+
+.auth-card h1 {
+  width: 100%;
+  margin: 0 0 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.15;
+
+  letter-spacing: -0.8px;
+  text-align: center;
+
+  white-space: normal;
+}
+
+/* Subtitle */
+
+.auth-card .subtitle {
+  margin: 0 0 24px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #666;
+}
+
+/* Form */
+
+.auth-card form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Inputs */
+
+.auth-input {
+  width: 100%;
+  height: 48px;
+
+  margin: 0 0 12px;
+  padding: 0 14px;
+
+  border: 1px solid #d8d8df;
+  border-radius: 10px;
+
+  background: #fff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: #8f86d0;
+  box-shadow: 0 0 0 3px rgba(143, 134, 208, 0.12);
+}
+
+/* Buttons */
+
+.auth-card .start-button {
+  width: 145px;
+  min-height: 48px;
+
+  margin: 4px auto 0;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #9085d0;
+  color: #111;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.auth-card .start-button:hover {
+  background: #8176c5;
+}
+
+/* Switch login/signup */
+
+.auth-card .text-button {
+  margin-top: 20px;
+
+  border: none;
+  background: transparent;
+
+  color: #665bb0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.auth-card .text-button:hover {
+  text-decoration: underline;
+}
+
+/* ---------- AUTH MESSAGES ---------- */
+
+.auth-card .error-message,
+.auth-card .success-message {
+  width: 100%;
+  margin: 4px 0 12px;
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.auth-card .error-message {
+  background: #fff0f0;
+  color: #c62828;
+  border: 1px solid #ffcaca;
+}
+
+.auth-card .success-message {
+  background: #eefaf1;
+  color: #28743b;
+  border: 1px solid #ccebd4;
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard-page {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1120px;
+
+  margin: 0 auto;
+  padding: 38px 28px 60px;
+}
+
+/* Header */
+
+.dashboard-header {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.dashboard-header > div {
+  min-width: 0;
+}
+
+.dashboard-header .eyebrow {
+  margin: 0 0 4px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+  color: #555;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(34px, 5vw, 48px);
+  font-weight: 500;
+
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.dashboard-header p:not(.eyebrow) {
+  margin: 7px 0 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Logout */
+
+.dashboard-header .secondary-button {
+  flex-shrink: 0;
+
+  padding: 9px 18px;
+
+  border: 1px solid #bcb6df;
+  border-radius: 8px;
+
+  background: white;
+  color: #665bb0;
+
+  font-family: Georgia, "Times New Roman", serif;
+  cursor: pointer;
+}
+
+/* Start button */
+
+.dashboard-start {
+  display: block;
+
+  width: 220px;
+  min-height: 48px;
+
+  margin: 30px auto 0;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #9085d0;
+  color: #111;
+
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dashboard-start:hover {
+  background: #8176c5;
+}
+
+/* Stats */
+
+.dashboard-stats {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 32px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  min-height: 105px;
+
+  padding: 22px 18px;
+
+  background: white;
+  border-radius: 17px;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.stat-card span {
+  margin-bottom: 8px;
+
+  font-size: 15px;
+  color: #666;
+}
+
+.stat-card strong {
+  font-size: 25px;
+  line-height: 1;
+}
+
+/* Recent interviews */
+
+.dashboard-section {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 38px auto 0;
+}
+
+.dashboard-section h2 {
+  margin: 0 0 18px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Empty state */
+
+.empty-state {
+  width: 100%;
+
+  padding: 38px 25px;
+
+  background: white;
+  border-radius: 17px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state h3 {
+  margin: 0 0 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.empty-state p {
+  margin: 0;
+
+  color: #666;
+}
+
+/* History */
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-card {
+  width: 100%;
+
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: white;
+  border-radius: 15px;
+
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.history-card h3 {
+  margin: 0 0 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.history-card p {
+  margin: 0 0 5px;
+  color: #666;
+}
+
+.history-card small {
+  color: #999;
+}
+
+.history-card strong {
+  flex-shrink: 0;
+  font-size: 21px;
+}
+
+
+/* =========================================================
+   SETUP PAGE
+   ========================================================= */
+
+.setup-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+}
+
+.setup-card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 40px;
+
+  background: white;
+  border-radius: 22px;
+
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.10);
+}
+
+.setup-card h1 {
+  margin: 0 0 8px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.setup-card .subtitle {
+  margin: 0 0 28px;
+  color: #666;
+}
+
+.setup-field {
+  margin-top: 20px;
+}
+
+.setup-field label {
+  display: block;
+  margin-bottom: 8px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.setup-field select {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d8d8df;
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .auth-page {
+    padding: 25px 15px;
+  }
+
+  .auth-card {
+    padding: 32px 24px 30px;
+  }
+
+  .auth-card .ai-logo {
+    width: 105px;
+    height: 105px;
+    min-width: 105px;
+  }
+
+  .auth-card h1 {
+    font-size: 29px;
+  }
+
+  .dashboard-page {
+    padding: 28px 18px 50px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .dashboard-header .secondary-button {
+    align-self: flex-start;
+  }
+
+  .dashboard-start {
+    width: 100%;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .history-card {
+    align-items: flex-start;
+  }
+
+  .setup-card {
+    padding: 28px 22px;
+  }
+}
